@@ -87,3 +87,5 @@ C:\Users\emin\Desktop\Electronic-Products-Market-Database-Management-System\obj\
 C:\Users\emin\Desktop\Electronic-Products-Market-Database-Management-System\obj\Debug\netcoreapp3.1\Electronic-Products-Market-Database-Management-System.csproj.CopyComplete
 C:\Users\emin\Desktop\Electronic-Products-Market-Database-Management-System\obj\Debug\netcoreapp3.1\Electronic-Products-Market-Database-Management-System.dll
 C:\Users\emin\Desktop\Electronic-Products-Market-Database-Management-System\obj\Debug\netcoreapp3.1\Electronic-Products-Market-Database-Management-System.pdb
+C:\Users\emin\Desktop\Electronic-Products-Market-Database-Management-System\bin\Debug\netcoreapp3.1\Npgsql.dll
+C:\Users\emin\Desktop\Electronic-Products-Market-Database-Management-System\bin\Debug\netcoreapp3.1\Npgsql.EntityFrameworkCore.PostgreSQL.dll
