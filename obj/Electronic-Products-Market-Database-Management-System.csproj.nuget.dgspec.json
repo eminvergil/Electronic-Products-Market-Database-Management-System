@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\emin\\Desktop\\Electronic-Products-Market-Database-Management-System\\Electronic-Products-Market-Database-Management-System.csproj": {}
+    "C:\\Users\\emin\\Desktop\\Electronic-Products-Market-Database-Management-System\\Electronic-Products-Market-Database-Management-System.csproj": {}
   },
   "projects": {
-    "c:\\Users\\emin\\Desktop\\Electronic-Products-Market-Database-Management-System\\Electronic-Products-Market-Database-Management-System.csproj": {
+    "C:\\Users\\emin\\Desktop\\Electronic-Products-Market-Database-Management-System\\Electronic-Products-Market-Database-Management-System.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\emin\\Desktop\\Electronic-Products-Market-Database-Management-System\\Electronic-Products-Market-Database-Management-System.csproj",
+        "projectUniqueName": "C:\\Users\\emin\\Desktop\\Electronic-Products-Market-Database-Management-System\\Electronic-Products-Market-Database-Management-System.csproj",
         "projectName": "Electronic-Products-Market-Database-Management-System",
-        "projectPath": "c:\\Users\\emin\\Desktop\\Electronic-Products-Market-Database-Management-System\\Electronic-Products-Market-Database-Management-System.csproj",
+        "projectPath": "C:\\Users\\emin\\Desktop\\Electronic-Products-Market-Database-Management-System\\Electronic-Products-Market-Database-Management-System.csproj",
         "packagesPath": "C:\\Users\\emin\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\emin\\Desktop\\Electronic-Products-Market-Database-Management-System\\obj\\",
+        "outputPath": "C:\\Users\\emin\\Desktop\\Electronic-Products-Market-Database-Management-System\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

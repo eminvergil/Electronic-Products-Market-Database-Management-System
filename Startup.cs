@@ -35,7 +35,9 @@ namespace Electronic_Products_Market_Database_Management_System
                           => options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
 
 
-                  services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                  services.AddDefaultIdentity<ApplicationUser>(
+                        // options => options.SignIn.RequireConfirmedAccount = true
+                        )
                       .AddEntityFrameworkStores<ApplicationDbContext>();
 
                   services.AddControllersWithViews();
