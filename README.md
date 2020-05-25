@@ -1,5 +1,5 @@
 # Electronic-Products-Market-Database-Management-System
 
 
-## Language:Python
-## SQL : MSSQL
+## Language: .NET CORE
+## SQL : postgreSQL
