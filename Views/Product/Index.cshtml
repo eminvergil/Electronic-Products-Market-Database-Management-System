@@ -8,7 +8,7 @@
 <hr />
 
 <table class="table table-hover">
-    <thead>
+    <thead class="thead-dark">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.pImage)
@@ -46,9 +46,22 @@
             </td>
             <td>
                 <a asp-action="AddOrEdit" asp-route-id="@item.pId"><i class="fa fa-marker fa-lg"></i></a>
+                <a asp-action="Decrease" asp-route-id="@item.pId"><i class="fa fa-minus fa-lg"></i></a>
                 <a asp-action="Delete" asp-route-id="@item.pId" class="text-danger ml-1" onclick="return confirm('are u sure to delete ?')"><i class="fa fa-trash-alt fa-lg"></i></a>
             </td>
         </tr>
 }
+
+    <p class="text-right">
+                Total Number of Products : 155
+                @* @foreach (var product in Model)
+                {
+                    int x = 0;
+                    x += Convert.ToInt32(product.number);
+                    Console.Write(x);
+                    @Html.DisplayName(x.ToString());
+                } *@
+    </p>
+
     </tbody>
 </table>

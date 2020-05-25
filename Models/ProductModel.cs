@@ -23,5 +23,6 @@ namespace Electronic_Products_Market_Database_Management_System.Models
             public bool inStock { get; set; }
             [DisplayName("Num of Product")]
             public int number { get; set; }
+            public int Count { get; set; }
       }
 }

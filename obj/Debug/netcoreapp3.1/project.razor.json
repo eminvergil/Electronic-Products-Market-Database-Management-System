@@ -20556,6 +20556,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\emin\\Desktop\\Electronic-Products-Market-Database-Management-System\\Views\\Product\\AddOrEdit.cshtml",
+      "TargetPath": "Views\\Product\\AddOrEdit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\emin\\Desktop\\Electronic-Products-Market-Database-Management-System\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"

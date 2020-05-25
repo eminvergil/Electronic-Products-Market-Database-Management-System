@@ -90,3 +90,4 @@ C:\Users\emin\Desktop\Electronic-Products-Market-Database-Management-System\obj\
 C:\Users\emin\Desktop\Electronic-Products-Market-Database-Management-System\bin\Debug\netcoreapp3.1\Npgsql.dll
 C:\Users\emin\Desktop\Electronic-Products-Market-Database-Management-System\bin\Debug\netcoreapp3.1\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\emin\Desktop\Electronic-Products-Market-Database-Management-System\obj\Debug\netcoreapp3.1\Razor\Views\Product\Index.cshtml.g.cs
+C:\Users\emin\Desktop\Electronic-Products-Market-Database-Management-System\obj\Debug\netcoreapp3.1\Razor\Views\Product\AddOrEdit.cshtml.g.cs

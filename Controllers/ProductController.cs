@@ -65,6 +65,26 @@ namespace Electronic_Products_Market_Database_Management_System.Controllers
                   return RedirectToAction(nameof(Index));
             }
 
+            public async Task<IActionResult> Decrease(int? id)
+            {
+                  var product = _context.Products.Find(id);
+                  product.number--;
+                  await _context.SaveChangesAsync();
+
+                  return RedirectToAction(nameof(Index));
+            }
+
+            // TODO: set,update the count in adding new products
+
+            // public async Task<IActionResult> GetCount(int? id)
+            // {
+            //       var product = _context.Products.Find(id);
+            //       product.Count += product.number;
+            //       await _context.SaveChangesAsync();
+
+            //       return RedirectToAction(nameof(Index));
+            // }
+
 
       }
 }
