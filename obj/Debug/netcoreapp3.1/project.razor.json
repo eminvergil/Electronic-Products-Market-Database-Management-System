@@ -17868,6 +17868,31 @@
         }
       },
       {
+        "Kind": "MVC.ViewComponent",
+        "Name": "__Generated__ShoppingCartSummaryViewComponentTagHelper",
+        "AssemblyName": "Electronic-Products-Market-Database-Management-System",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "vc:shopping-cart-summary",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "__Generated__ShoppingCartSummaryViewComponentTagHelper",
+          "MVC.ViewComponent.Name": "ShoppingCartSummary"
+        }
+      },
+      {
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -20531,6 +20556,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\emin\\Desktop\\Electronic-Products-Market-Database-Management-System\\Views\\Shared\\Components\\ShoppingCartSummary\\Default.cshtml",
+      "TargetPath": "Views\\Shared\\Components\\ShoppingCartSummary\\Default.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\emin\\Desktop\\Electronic-Products-Market-Database-Management-System\\Views\\Product\\Index.cshtml",
       "TargetPath": "Views\\Product\\Index.cshtml",
       "FileKind": "mvc"
@@ -20541,8 +20571,23 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\emin\\Desktop\\Electronic-Products-Market-Database-Management-System\\Views\\Shared\\AddProduct.cshtml",
+      "TargetPath": "Views\\Shared\\AddProduct.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\emin\\Desktop\\Electronic-Products-Market-Database-Management-System\\Views\\Order\\CheckoutComplete.cshtml",
+      "TargetPath": "Views\\Order\\CheckoutComplete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\emin\\Desktop\\Electronic-Products-Market-Database-Management-System\\Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\emin\\Desktop\\Electronic-Products-Market-Database-Management-System\\Views\\Order\\Checkout.cshtml",
+      "TargetPath": "Views\\Order\\Checkout.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20553,6 +20598,11 @@
     {
       "FilePath": "c:\\Users\\emin\\Desktop\\Electronic-Products-Market-Database-Management-System\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\emin\\Desktop\\Electronic-Products-Market-Database-Management-System\\Views\\ShoppingCart\\Index.cshtml",
+      "TargetPath": "Views\\ShoppingCart\\Index.cshtml",
       "FileKind": "mvc"
     },
     {

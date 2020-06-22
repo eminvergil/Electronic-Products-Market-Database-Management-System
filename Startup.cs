@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Electronic_Products_Market_Database_Management_System.Data;
 using Electronic_Products_Market_Database_Management_System.Models;
+using Electronic_Products_Market_Database_Management_System.Models.interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -45,11 +46,19 @@ namespace Electronic_Products_Market_Database_Management_System
                   });
 
                   services.AddControllersWithViews();
+                  services.AddMvc();
+                  services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+                  services.AddScoped(sp => ShoppingCart.GetCart(sp));
+                  services.AddTransient<IOrderRepository, OrderRepository>();
+
+
+                  services.AddMemoryCache();
+                  services.AddSession();
                   services.AddRazorPages();
             }
 
             // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-            public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+            public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider serviceProvider)
             {
                   if (env.IsDevelopment())
                   {
@@ -64,6 +73,8 @@ namespace Electronic_Products_Market_Database_Management_System
                   }
                   app.UseHttpsRedirection();
                   app.UseStaticFiles();
+                  app.UseSession();
+                  // app.UseMvc();
 
                   app.UseRouting();
 

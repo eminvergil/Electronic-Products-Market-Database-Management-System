@@ -27,7 +27,7 @@ using Electronic_Products_Market_Database_Management_System.Models;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"573bc4a05867c9aaa5d3a942068831f9bccd95ba", @"/Views/Product/AddOrEdit.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"fb9764236ca4fa92e80f617450d181b0a36d66d7", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7cf42be01e4379e35c573b3158beb4a7fc370ee9", @"/Views/_ViewImports.cshtml")]
     public class Views_Product_AddOrEdit : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Electronic_Products_Market_Database_Management_System.Models.ProductModel>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("text-danger"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);

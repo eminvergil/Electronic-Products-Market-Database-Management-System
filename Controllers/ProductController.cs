@@ -54,7 +54,6 @@ namespace Electronic_Products_Market_Database_Management_System.Controllers
                   return View(product);
             }
 
-
             // GET: Product/Delete/5
             public async Task<IActionResult> Delete(int? id)
             {
@@ -74,17 +73,25 @@ namespace Electronic_Products_Market_Database_Management_System.Controllers
                   return RedirectToAction(nameof(Index));
             }
 
-            // TODO: set,update the count in adding new products
+            public async Task<IActionResult> Increase(int? id)
+            {
+                  var product = _context.Products.Find(id);
+                  product.number++;
+                  await _context.SaveChangesAsync();
 
-            // public async Task<IActionResult> GetCount(int? id)
+                  return RedirectToAction(nameof(Index));
+            }
+
+            // public IEnumerable<ProductModel> GetAll()
             // {
-            //       var product = _context.Products.Find(id);
-            //       product.Count += product.number;
-            //       await _context.SaveChangesAsync();
+            //       var product = _context.Products.Count();
+            //       // product.number++;
+            //       // await _context.SaveChangesAsync();
 
-            //       return RedirectToAction(nameof(Index));
+            //       return product;
             // }
 
-
+            public IEnumerable<ProductModel> GetProductsAvailable() =>
+                  _context.Products.Where(p => p.inStock);
       }
 }

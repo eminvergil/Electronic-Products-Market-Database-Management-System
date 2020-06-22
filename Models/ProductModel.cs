@@ -13,16 +13,22 @@ namespace Electronic_Products_Market_Database_Management_System.Models
             [Required(ErrorMessage = "this field is required")]
             [DisplayName("Product Name")]
             public string pName { get; set; }
+
             [Column(TypeName = "varchar(250)")]
             [Required(ErrorMessage = "this field is required")]
             [DisplayName("Product Image")]
             public string pImage { get; set; }
+
             [DisplayName("Price")]
             public int price { get; set; }
+
             [DisplayName("Product is stock")]
             public bool inStock { get; set; }
+
             [DisplayName("Num of Product")]
             public int number { get; set; }
             public int Count { get; set; }
+
+
       }
 }

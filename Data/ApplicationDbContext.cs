@@ -15,5 +15,11 @@ namespace Electronic_Products_Market_Database_Management_System.Data
             }
 
             public DbSet<ProductModel> Products { get; set; }
+
+            public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
+
+
+            public DbSet<Order> Orders { get; set; }
+            public DbSet<OrderDetail> OrderDetails { get; set; }
       }
 }

@@ -1,5 +1,7 @@
 @model IEnumerable<Electronic_Products_Market_Database_Management_System.Models.ProductModel>
 
+
+
 @{
     ViewData["Title"] = "Index";
 }
@@ -33,7 +35,7 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.pImage)
+                <img src=@Html.DisplayFor(modelItem => item.pImage)  style="width: 250px;"/>
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.pName)
@@ -47,21 +49,28 @@
             <td>
                 <a asp-action="AddOrEdit" asp-route-id="@item.pId"><i class="fa fa-marker fa-lg"></i></a>
                 <a asp-action="Decrease" asp-route-id="@item.pId"><i class="fa fa-minus fa-lg"></i></a>
+                <a asp-action="Increase" asp-route-id="@item.pId"><i class="fa fa-plus fa-lg"></i></a>
                 <a asp-action="Delete" asp-route-id="@item.pId" class="text-danger ml-1" onclick="return confirm('are u sure to delete ?')"><i class="fa fa-trash-alt fa-lg"></i></a>
+                
+                @Html.Partial("AddProduct" , item)
             </td>
         </tr>
 }
 
-    <p class="text-right">
-                Total Number of Products : 155
-                @* @foreach (var product in Model)
-                {
-                    int x = 0;
-                    x += Convert.ToInt32(product.number);
-                    Console.Write(x);
-                    @Html.DisplayName(x.ToString());
-                } *@
-    </p>
+    <div class="text-right">
+                @{
+                    var sum = 0;
+                    foreach (var item in Model)
+                    {
+                        sum+= item.number;    
+                    }
+                    @* Console.WriteLine(sum); *@
+                    sum.ToString();
+                }
+
+                Total Number of Products : @sum 
+                
+    </div>
 
     </tbody>
 </table>

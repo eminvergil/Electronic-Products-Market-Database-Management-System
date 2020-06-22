@@ -83,6 +83,94 @@ namespace Electronic_Products_Market_Database_Management_System.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("Electronic_Products_Market_Database_Management_System.Models.Order", b =>
+                {
+                    b.Property<int>("OrderId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<string>("AddressLine1")
+                        .IsRequired()
+                        .HasColumnType("character varying(100)")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("AddressLine2")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Country")
+                        .IsRequired()
+                        .HasColumnType("character varying(50)")
+                        .HasMaxLength(50);
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("character varying(50)")
+                        .HasMaxLength(50);
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("character varying(50)")
+                        .HasMaxLength(50);
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("character varying(50)")
+                        .HasMaxLength(50);
+
+                    b.Property<DateTime>("OrderPlaced")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<decimal>("OrderTotal")
+                        .HasColumnType("numeric");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("character varying(25)")
+                        .HasMaxLength(25);
+
+                    b.Property<string>("State")
+                        .HasColumnType("character varying(10)")
+                        .HasMaxLength(10);
+
+                    b.Property<string>("ZipCode")
+                        .IsRequired()
+                        .HasColumnType("character varying(10)")
+                        .HasMaxLength(10);
+
+                    b.HasKey("OrderId");
+
+                    b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("Electronic_Products_Market_Database_Management_System.Models.OrderDetail", b =>
+                {
+                    b.Property<int>("OrderDetailId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<int>("Amount")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("OrderId")
+                        .HasColumnType("integer");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("numeric");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("OrderDetailId");
+
+                    b.HasIndex("OrderId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("OrderDetails");
+                });
+
             modelBuilder.Entity("Electronic_Products_Market_Database_Management_System.Models.ProductModel", b =>
                 {
                     b.Property<int>("pId")
@@ -113,6 +201,29 @@ namespace Electronic_Products_Market_Database_Management_System.Migrations
                     b.HasKey("pId");
 
                     b.ToTable("Products");
+                });
+
+            modelBuilder.Entity("Electronic_Products_Market_Database_Management_System.Models.ShoppingCartItem", b =>
+                {
+                    b.Property<int>("ShoppingCartItemId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<int>("Amount")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("ProductpId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("ShoppingCartId")
+                        .HasColumnType("text");
+
+                    b.HasKey("ShoppingCartItemId");
+
+                    b.HasIndex("ProductpId");
+
+                    b.ToTable("ShoppingCartItems");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -247,6 +358,28 @@ namespace Electronic_Products_Market_Database_Management_System.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("Electronic_Products_Market_Database_Management_System.Models.OrderDetail", b =>
+                {
+                    b.HasOne("Electronic_Products_Market_Database_Management_System.Models.Order", "Order")
+                        .WithMany("OrderLines")
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Electronic_Products_Market_Database_Management_System.Models.ProductModel", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Electronic_Products_Market_Database_Management_System.Models.ShoppingCartItem", b =>
+                {
+                    b.HasOne("Electronic_Products_Market_Database_Management_System.Models.ProductModel", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductpId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
